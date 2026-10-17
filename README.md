@@ -1,7 +1,7 @@
 # GateKeeper AI SAST Triage
 
 This is our Phase 1 project for checking whether an LLM can help developers review
-false alarms from Java static-analysis tools in a CI/CD pipeline.
+false alarms from Java static-analysis tools in a CI/CD pipeline for.
 
 ## What is included
 
@@ -11,7 +11,7 @@ false alarms from Java static-analysis tools in a CI/CD pipeline.
 - An agent that can read files and search the repository before deciding.
 - A simple CI gate: real vulnerabilities block, false alarms are suppressed, and
   uncertain cases go to a human.
-- Tests for the parser, metrics, tools, agent and gate.
+- Tests suite for the parser, metrics, tools, agent and gate.
 
 ## Install and test
 
