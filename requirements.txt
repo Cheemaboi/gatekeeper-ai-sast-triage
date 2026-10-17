@@ -1,0 +1,4 @@
+pydantic>=2.5
+pytest>=7
+# optional, only for the anthropic provider
+anthropic>=0.40

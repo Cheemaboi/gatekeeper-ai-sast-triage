@@ -1,0 +1,27 @@
+# Example of how the triage gate plugs into a project's CI (not run in this repo).
+# A SAST step produces a SpotBugs/FindSecBugs XML report; the triage step judges each
+# alert; the gate step fails the job only for alerts judged real (or unsure, if strict).
+# NOTE: the current CLI triages the labelled evaluation set; triaging a fresh report
+# without ground truth (a --report mode) is a Phase 2 task.
+name: sast-triage-gate
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - name: SAST (SpotBugs + FindSecBugs)
+        run: mvn -q compile spotbugs:spotbugs   # writes target/spotbugsXml.xml
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r triage/requirements.txt
+      - name: Triage alerts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m sastriage.cli triage --system agent --provider anthropic --out triage.jsonl
+      - name: Gate
+        run: python -m sastriage.cli gate --run triage.jsonl

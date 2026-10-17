@@ -1,0 +1,7 @@
+<BugCollection>
+<BugInstance type='SQL_INJECTION_JDBC' cweid='89'><LongMessage>SQL injection</LongMessage><Class classname='org.owasp.benchmark.testcode.BenchmarkTest00001' primary='true'/><SourceLine classname='org.owasp.benchmark.testcode.BenchmarkTest00001' start='8' end='8'/></BugInstance>
+<BugInstance type='SQL_INJECTION_JDBC' cweid='89'><LongMessage>SQL injection</LongMessage><Class classname='org.owasp.benchmark.testcode.BenchmarkTest00002' primary='true'/><SourceLine classname='org.owasp.benchmark.testcode.BenchmarkTest00002' start='9' end='9'/></BugInstance>
+<BugInstance type='COOKIE_USAGE'><Class classname='org.owasp.benchmark.testcode.BenchmarkTest00002' primary='true'/></BugInstance>
+<BugInstance type='DES_USAGE' cweid='326'><Class classname='org.owasp.benchmark.testcode.BenchmarkTest00003' primary='true'/><SourceLine start='3' end='3'/></BugInstance>
+<BugInstance type='SPRING_ENDPOINT'><Class classname='org.owasp.benchmark.helpers.DataBaseServer' primary='true'/></BugInstance>
+</BugCollection>
