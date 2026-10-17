@@ -1,0 +1,33 @@
+{
+  "n": 8,
+  "errors": 42,
+  "confusion": {
+    "tp": 4,
+    "fn": 0,
+    "fp": 1,
+    "tn": 3,
+    "unsure_real": 0,
+    "unsure_fake": 0
+  },
+  "precision": 0.8,
+  "recall_decided": 1.0,
+  "f1": 0.8888888888888888,
+  "accuracy_decided": 0.875,
+  "coverage": 1.0,
+  "selective_error": 0.125,
+  "confidence_brier": 0.113125,
+  "confidence_ece_10bin": 0.11250000000000004,
+  "real_vuln_retention": 1.0,
+  "missed_real_vulns": 0,
+  "false_alarm_suppression": 0.75,
+  "abstention_rate": 0.0,
+  "human_review_load": 0.0,
+  "alerts_remaining": 5,
+  "evidence_coverage": 1.0,
+  "evidence_items_mean": 2.25,
+  "llm_calls_mean": 3.625,
+  "tool_steps_mean": 3.625,
+  "tokens_in_total": 36941,
+  "tokens_out_total": 2273,
+  "latency_median_s": 5.6839611530303955
+}
