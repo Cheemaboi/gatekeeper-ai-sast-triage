@@ -83,7 +83,7 @@ def cmd_triage(a) -> None:
     out = Path(a.out or f"results/{a.system}_{provider.model.replace('/', '_')}.jsonl")
     out.parent.mkdir(parents=True, exist_ok=True)
     records = []
-    with open(out, "w") as fh:
+    with open(out, "w", encoding="utf-8") as fh:
         for i, lf in enumerate(items, 1):
             r = system.triage(lf)
             records.append(r)

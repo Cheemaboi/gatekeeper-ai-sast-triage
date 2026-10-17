@@ -71,7 +71,9 @@ class OpenAICompatibleProvider(Provider):
         with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read())
         usage = data.get("usage", {})
-        return Completion(data["choices"][0]["message"]["content"],
+        message = data["choices"][0]["message"]
+        text = message.get("content") or message.get("reasoning") or ""
+        return Completion(text,
                           usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0),
                           time.time() - t0)
 

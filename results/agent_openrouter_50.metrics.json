@@ -1,0 +1,33 @@
+{
+  "n": 0,
+  "errors": 50,
+  "confusion": {
+    "tp": 0,
+    "fn": 0,
+    "fp": 0,
+    "tn": 0,
+    "unsure_real": 0,
+    "unsure_fake": 0
+  },
+  "precision": 0.0,
+  "recall_decided": 0.0,
+  "f1": 0.0,
+  "accuracy_decided": 0.0,
+  "coverage": 0.0,
+  "selective_error": 0.0,
+  "confidence_brier": 0.0,
+  "confidence_ece_10bin": 0.0,
+  "real_vuln_retention": 0.0,
+  "missed_real_vulns": 0,
+  "false_alarm_suppression": 0.0,
+  "abstention_rate": 0.0,
+  "human_review_load": 0.0,
+  "alerts_remaining": 0,
+  "evidence_coverage": 0.0,
+  "evidence_items_mean": 0,
+  "llm_calls_mean": 0,
+  "tool_steps_mean": 0,
+  "tokens_in_total": 0,
+  "tokens_out_total": 0,
+  "latency_median_s": 0
+}
